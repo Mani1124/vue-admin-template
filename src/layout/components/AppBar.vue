@@ -81,7 +81,7 @@
           </v-list>
           <v-divider></v-divider>
           <v-list dense>
-            <v-list-item  v-for="item in accountMenuItems" v-bind:style= "[item.route===$store.state.active_nav ? {'background':$vuetify.theme.themes[$store.state.dark ? 'dark' : 'light'].primary,'color':'white'} : {}]" link @click="navigate(item)">
+            <v-list-item  v-for="(item,index) in accountMenuItems" :key="index" v-bind:style= "[item.route===$store.state.active_nav ? {'background':$vuetify.theme.themes[$store.state.dark ? 'dark' : 'light'].primary,'color':'white'} : {}]" link @click="navigate(item)">
               <v-list-item-icon>
                 <v-icon  v-bind:style= "[item.route===$store.state.active_nav ? {'color':'white'} : {}]">{{item.icon}}</v-icon>
               </v-list-item-icon>
