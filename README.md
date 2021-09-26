@@ -10,6 +10,7 @@ A beautiful free vuejs admin template, designed using vuetify and apexcharts.
 ## Installation
 ```
 git clone https://github.com/Mani1124/vue-admin-template.git
+cd vue-admin-template
 yarn install
 ```
 
@@ -34,6 +35,7 @@ Dashboard (Different Color Scheme)
 
 ![Alt text](screenshots/dashboard-color.png?raw=true "dashboard")
 
+<a href="https://www.buymeacoffee.com/mmoirangthem" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="100" width="500"></a>
 ## Compiles and hot-reloads for development
 ```
 yarn serve
