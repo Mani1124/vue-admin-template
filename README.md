@@ -7,6 +7,7 @@ A beautiful free vuejs admin template, designed using vuetify and apexcharts.
 - Support color scheme.
 - Build in authentication pages.
 - Fully responsive design.
+- Support PWA.
 ## Installation
 ```
 git clone https://github.com/Mani1124/vue-admin-template.git
