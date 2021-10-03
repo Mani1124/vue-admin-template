@@ -13,6 +13,7 @@ git clone https://github.com/Mani1124/vue-admin-template.git
 cd vue-admin-template
 yarn install
 ```
+<a href="https://mani1124.github.io" style="font-size:30px;font-weight:bold" target="_blank">Live Demo</a>
 
 <a href="https://www.buymeacoffee.com/mmoirangthem" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="100" width="500"></a>
 ## Screenshots
