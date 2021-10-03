@@ -125,8 +125,8 @@ export default {
       valid: true,
       showPassword: false,
       user: {
-        email:null,
-        password: null,
+        email:"johndoe@example.com",
+        password: "demo",
       },
       rules: {
         email: [
