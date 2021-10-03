@@ -1,6 +1,5 @@
 <template>
-    <v-container fluid>
-
+    <v-container fluid v-if="chartFixed">
         <v-row>
             <v-col lg="3" md="3" cols="12" v-for="(chart,index) in charts" :key="index">
                 <line-chart :icon="chart.icon" :currency="chart.currency" :value="chart.value" :chartTitle="chart.title" :type="chart.chartOptions.chart.type" :data="chart" :color="chart.background"/>
@@ -48,6 +47,7 @@ import Breadcrumb from "../../../components/breadcrumb/Breadcrumb";
       },
         data(){
             return {
+                chartFixed:false,
                 multilineChartData:{
                   background:'white',
                   series: [{
@@ -305,6 +305,7 @@ import Breadcrumb from "../../../components/breadcrumb/Breadcrumb";
                 chartOptions: {
                   colors:["#fff"],
                   chart: {
+                    width: '100%',
                     toolbar: {
                       show: false
                     },
@@ -364,6 +365,7 @@ import Breadcrumb from "../../../components/breadcrumb/Breadcrumb";
                 chartOptions: {
                   colors:["#fff"],
                   chart: {
+                    width: '100%',
                     toolbar: {
                       show: false
                     },
@@ -423,6 +425,7 @@ import Breadcrumb from "../../../components/breadcrumb/Breadcrumb";
                 chartOptions: {
                   colors:["#fff"],
                   chart: {
+                    width: '100%',
                     toolbar: {
                       show: false
                     },
@@ -482,6 +485,7 @@ import Breadcrumb from "../../../components/breadcrumb/Breadcrumb";
                 chartOptions: {
                   colors:["#fff"],
                   chart: {
+                    width: '100%',
                     toolbar: {
                       show: false
                     },
@@ -541,7 +545,9 @@ import Breadcrumb from "../../../components/breadcrumb/Breadcrumb";
         },
         methods:{
 
-
-        }
+        },
+      mounted() {
+        this.chartFixed=true
+      }
     }
 </script>
