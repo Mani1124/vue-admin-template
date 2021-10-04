@@ -1,5 +1,6 @@
 <template>
     <v-navigation-drawer
+        :right="$vuetify.rtl"
         :value="$store.state.drawer"
         app
     >
@@ -162,7 +163,7 @@
                       },
 
                     ],
-                    title: 'Vuetify Components',
+                    title: 'Components',
                     external:false,
                     params:null,
                   },

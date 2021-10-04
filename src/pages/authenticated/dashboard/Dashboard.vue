@@ -18,7 +18,7 @@
           <pie-chart  :type="revenueChartData.chartOptions.chart.type" :data="revenueChartData"/>
         </v-col>
         <v-col lg="6" md="6" cols="12">
-          <pie-chart  :type="countryChartData.chartOptions.chart.type" :data="countryChartData"/>
+          <bar-chart  :type="countryChartData.chartOptions.chart.type" :data="countryChartData"/>
         </v-col>
       </v-row>
       <v-row>
@@ -32,18 +32,20 @@
     </v-container>
 </template>
 <script>
-import Chart from "./../../../components/chart/linechart/LineChart";
-import MultilineChart from "../../../components/chart/linechart/MultilineChart";
-import PieChart from "../../../components/chart/linechart/PieChart";
+import Chart from "./../../../components/chart/LineChart";
+import MultilineChart from "../../../components/chart/MultilineChart";
+import PieChart from "../../../components/chart/PieChart";
 import GuestTable from "./components/GuestTable";
 import Breadcrumb from "../../../components/breadcrumb/Breadcrumb";
+import BarChart from "../../../components/chart/BarChart";
     export default {
       components:{
         'breadcrumb':Breadcrumb,
         'guest-table':GuestTable,
         'line-chart':Chart,
         'pie-chart':PieChart,
-        'multiline-chart':MultilineChart
+        'multiline-chart':MultilineChart,
+        'bar-chart':BarChart
       },
         data(){
             return {
@@ -62,7 +64,7 @@ import Breadcrumb from "../../../components/breadcrumb/Breadcrumb";
                   chartOptions: {
                     chart: {
                       toolbar: {
-                        show: true,
+                        show: false,
                         offsetX: 0,
                         offsetY: 0,
                         tools: {
@@ -122,9 +124,8 @@ import Breadcrumb from "../../../components/breadcrumb/Breadcrumb";
                       dashArray: [0, 8, 5]
                     },
                     colors:["#0f7e02","#8c8c8c"],
-                    title: {
+                    chartTitle: {
                       text: 'Actual Revenue V Expected Revenue',
-                      align: 'left'
                     },
                     legend: {
                       tooltipHoverFormatter: function(val, opts) {
@@ -173,9 +174,8 @@ import Breadcrumb from "../../../components/breadcrumb/Breadcrumb";
                       type: 'pie',
                     },
                     colors:["#0f7e02","#04277c","#7e023a","#8f8917","#7b0a83"],
-                    title: {
-                      text: 'Revenue V Room Type',
-                      align: 'left'
+                    chartTitle: {
+                      text: 'Revenue V Room Types',
                     },
                     labels: ['Standard Room', 'Deluxe Room', 'Suite Room', 'Connecting Room', 'Apartment Room'],
                     responsive: [{
@@ -200,9 +200,8 @@ import Breadcrumb from "../../../components/breadcrumb/Breadcrumb";
                     type: 'donut',
                   },
                   colors:["#a29f04","#d20423","#06ad7a","#ce2405","#b800c4"],
-                  title: {
+                  chartTitle: {
                     text: 'Revenue V OTA',
-                    align: 'left'
                   },
                   labels: ['MMT', 'Cleartrip', 'Yatra', 'Via', 'Paytm'],
                   responsive: [{
@@ -220,55 +219,62 @@ import Breadcrumb from "../../../components/breadcrumb/Breadcrumb";
                 },
                 countryChartData:{
                   series: [{
-                    data:  [12, 23, 22, 11, 17]
+                    data: [21, 22, 10, 28, 16]
                   }],
                   chartOptions: {
-
-                    colors:["#06ad7a"],
-                    title: {
-                      text: 'Revenue V OTA',
-                      align: 'left'
+                    chartTitle: {
+                      text: 'Revenue V Country',
                     },
                     chart: {
                       toolbar: {
                         show: false,
                       },
+                      height: 350,
                       type: 'bar',
-                      height: 350
+                      events: {
+                        click: function(chart, w, e) {
+                          // console.log(chart, w, e)
+                        }
+                      }
                     },
+                    colors: ["#880E4F","#FF5722","#2962FF","#00C853","#607D8B"],
                     plotOptions: {
                       bar: {
-                        horizontal: true,
+                        columnWidth: '45%',
+                        distributed: true,
                       }
                     },
                     dataLabels: {
-                      enabled: true
+                      enabled: false
                     },
-                    xaxis: {
-                      categories: ['India', 'Germany', 'US', 'UK', 'Australia'],
-                      labels: {
-                        show: false,
-                      },
-                    },
-                    grid: {
+                    legend: {
                       show: false
-                    },
-                    yaxis: {
-                      reversed: true,
-                      axisTicks: {
-                        show: false
-                      }
                     },
                     tooltip: {
                       y: [
                         {
                           title: {
                             formatter: function (val) {
-                              return "Revenue:"
+                              return "INR (lakhs)"
                             }
                           }
-                        }
+                        },
                       ]
+                    },
+                    xaxis: {
+                      categories: [
+                        ['India'],
+                        ['US'],
+                        ['Australia'],
+                        ['South Africa'],
+                        ['Thailand'],
+                      ],
+                      labels: {
+                        style: {
+                          colors:  ["#880E4F","#FF5722","#2962FF","#00C853","#607D8B"],
+                          fontSize: '12px'
+                        }
+                      }
                     }
                   },
                 },
@@ -285,6 +291,7 @@ import Breadcrumb from "../../../components/breadcrumb/Breadcrumb";
                 ],
 
             }
+
         },
         computed:{
           charts(){
@@ -548,6 +555,11 @@ import Breadcrumb from "../../../components/breadcrumb/Breadcrumb";
         },
       mounted() {
         this.chartFixed=true
+      },
+      watch:{
+        '$vuetify.rtl': function (value) {
+          this.remount+=1;
+        }
       }
     }
 </script>

@@ -44,6 +44,14 @@
                 <v-icon>mdi-weather-night</v-icon>
             </template>
         </v-btn>
+      <v-btn icon @click="toggleRTL" >
+        <template v-if="$store.state.rtl">
+          <v-icon>mdi-format-textdirection-l-to-r</v-icon>
+        </template>
+        <template v-else>
+          <v-icon>mdi-format-textdirection-r-to-l</v-icon>
+        </template>
+      </v-btn>
       <v-menu
           v-model="accountMenu"
           :close-on-content-click="false"
@@ -150,6 +158,10 @@ import {ThemeColors} from "../../helpers/ThemeColors";
               this.$store.dispatch('setActiveNavigation',item.route);
             }
 
+          },
+          toggleRTL(){
+            this.$store.dispatch('toggleRTL',!this.$store.state.rtl);
+            this.$vuetify.rtl = !this.$vuetify.rtl
           },
             toggleTheme(){
                 this.$store.dispatch('toggleTheme',!this.$store.state.dark);

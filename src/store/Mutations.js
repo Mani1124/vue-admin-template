@@ -12,6 +12,9 @@ const mutations = {
     TOGGLE_THEME (state,value) {
         state.dark = value
     },
+    TOGGLE_RTL (state,value) {
+        state.rtl = value
+    },
     SET_COLOR(state,color) {
         state.color = color
     },
