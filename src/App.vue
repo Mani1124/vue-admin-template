@@ -110,6 +110,14 @@
                     });
                 }
             }
+        },
+        mounted() {
+          this.$store.dispatch('setLanguage',this.$i18n.locale);
+        },
+      watch:{
+          '$store.state.language': function(value) {
+            this.$i18n.locale = value
+          }
         }
 
     };

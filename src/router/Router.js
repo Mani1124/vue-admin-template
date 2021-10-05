@@ -46,7 +46,7 @@ export default new Router({
                 {
                     path: '',
                     name: 'Dashboard',
-                    meta: { name: 'Dashboard' },
+                    meta: { name: 'dashboard' },
                     components: {
                         admin: () => import('../pages/authenticated/dashboard/Dashboard'),
                     },
@@ -54,7 +54,7 @@ export default new Router({
                 {
                     path: 'page/singin/:context',
                     name: 'PageSignIn',
-                    meta: { name: 'Sign In' },
+                    meta: { name: 'signin' },
                     components: {
                         admin: () => import('../pages/public/singin/SingIn'),
                     },
@@ -62,7 +62,7 @@ export default new Router({
                 {
                     path: 'page/forget/password/:context',
                     name: 'PageForgetPassword',
-                    meta: { name: 'Forget Password' },
+                    meta: { name: 'recoverpassword' },
                     components: {
                         admin: () => import('../pages/public/forget_password/ForgetPassword'),
                     },
@@ -70,7 +70,7 @@ export default new Router({
                 {
                     path: 'page/recover/password/:context',
                     name: 'PageRecoverPassword',
-                    meta: { name: 'Recover Password' },
+                    meta: { name: 'forgetpassword' },
                     components: {
                         admin: () => import('../pages/public/forget_password/RecoverPassword'),
                     },
@@ -78,15 +78,24 @@ export default new Router({
                 {
                     path: 'page/create/account/:context',
                     name: 'PageRegistration',
-                    meta: { name: 'Registration' },
+                    meta: { name: 'registration' },
                     components: {
                         admin: () => import('../pages/public/registration/Registration'),
                     },
                 },
                 {
+                    path: 'page/calendar/event',
+                    name: 'EventCalendar',
+                    meta: { name: 'eventcalendar' },
+                    components: {
+                        admin: () => import('../pages/authenticated/calendar/EventCalendar'),
+                    },
+                },
+
+                {
                     path: '/account/settings',
                     name: 'Settings',
-                    meta: { name: 'Settings' },
+                    meta: { name: 'setting' },
                     components: {
                         admin: () => import('../pages/authenticated/setting/Setting'),
                     },

@@ -34,7 +34,7 @@
               <h2
                   class="text-md-center text-lg-center form-title mt-7"
               >
-                Recover Password
+                {{ $t('recoverpassword') }}
               </h2>
               <p class="font-weight-regular text-md-center text-lg-center body-1 mt-1">
                 Set New Password

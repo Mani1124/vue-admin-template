@@ -10,6 +10,12 @@ const actions = {
     toggleTheme ({ commit },value) {
         commit('TOGGLE_THEME',value)
     },
+    toggleRTL ({ commit },value) {
+        commit('TOGGLE_RTL',value)
+    },
+    setLanguage ({ commit },value) {
+        commit('SET_LANGUAGE',value)
+    },
     setColor({ commit },color) {
         commit('SET_COLOR',color)
     },

@@ -7,21 +7,26 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "add": "^2.0.6",
     "apexcharts": "^3.28.3",
     "axios": "^0.21.1",
+    "moment": "^2.29.1",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
     "vue-apexcharts": "^1.6.2",
     "vue-code-highlight": "^0.7.8",
+    "vue-i18n": "8.26.5",
     "vue-moment": "^4.1.0",
     "vue-progressbar": "^0.7.5",
     "vue-router": "^3.2.0",
     "vueclaw": "^1.1.0",
     "vuetify": "2.5.8",
+    "vuetify-datetime-picker": "^2.1.1",
     "vuetify-dialog": "^2.0.17",
     "vuetify-image-input": "^19.2.2",
     "vuex": "^3.4.0",
-    "vuex-persist": "^3.1.3"
+    "vuex-persist": "^3.1.3",
+    "yarn": "^1.22.15"
   },
   "devDependencies": {
     "@vue/cli-plugin-pwa": "~4.5.0",
