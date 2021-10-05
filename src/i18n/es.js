@@ -78,6 +78,7 @@ const es={
   Bookings:'Reservaciones',
   Revenue:'Ingresos',
   'New Guests':'Nuevos invitados',
-  Occupancy:'Ocupación'
+  Occupancy:'Ocupación',
+  eventcalendar:'Calendario de eventos'
 };
 export default es;

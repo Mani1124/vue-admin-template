@@ -84,6 +84,15 @@ export default new Router({
                     },
                 },
                 {
+                    path: 'page/calendar/event',
+                    name: 'EventCalendar',
+                    meta: { name: 'eventcalendar' },
+                    components: {
+                        admin: () => import('../pages/authenticated/calendar/EventCalendar'),
+                    },
+                },
+
+                {
                     path: '/account/settings',
                     name: 'Settings',
                     meta: { name: 'setting' },

@@ -78,6 +78,7 @@ const sv={
     Bookings:'Bokningar',
     Revenue:'Inkomst',
     'New Guests':'Nya gäster',
-    Occupancy:'Beläggning'
+    Occupancy:'Beläggning',
+    eventcalendar:'Evenemangskalender'
 }
 export default sv;

@@ -12,8 +12,8 @@ import './plugins/vue-moment'
 import './plugins/progressbar'
 import './plugins/chart'
 import './plugins/vuetify-dialog'
-import './plugins/i18n'
 import i18n from "./plugins/i18n";
+import './plugins/vuetify-date-time'
 Vue.config.productionTip = false
 import VueCodeHighlight from 'vue-code-highlight';
 Vue.use(VueCodeHighlight)

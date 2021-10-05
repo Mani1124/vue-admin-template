@@ -78,7 +78,8 @@ const en= {
     Bookings:'Bookings',
     Revenue:'Revenue',
     'New Guests':'New Guests',
-    Occupancy:'Occupancy'
+    Occupancy:'Occupancy',
+    eventcalendar:'Event calendar'
 
 }
 export default en;

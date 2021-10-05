@@ -94,6 +94,14 @@
                         params:null,
                     },
                   {
+                    icon: 'mdi-calendar',
+                    children: [],
+                    title: 'Event Calendar',
+                    route:'EventCalendar',
+                    external:false,
+                    params:null,
+                  },
+                  {
                     icon: 'mdi-connection',
                     active: false,
                     children: [
