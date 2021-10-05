@@ -9,6 +9,8 @@ A beautiful free vuejs admin template, designed using vuetify and apexcharts.
 - Fully responsive design.
 - Support PWA.
 - Support RTL.
+- i18n Integrated
+- Event calendar
 ## Installation
 ```
 git clone https://github.com/Mani1124/vue-admin-template.git
@@ -48,10 +50,12 @@ yarn serve
 ```
 yarn build
 ```
-## Roadmap
+## Todo
 - <del>RTL support</del>
-- Multiple language support
+- <del>Multiple language support</del>
+- <del>Event calendar</del>
 - Better documentation
+- Vuetify 3.x.x migration
 
 ## Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
