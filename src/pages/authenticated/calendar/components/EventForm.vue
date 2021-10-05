@@ -27,16 +27,6 @@
           persistent-hint
           placeholder="Details"
       />
-      <v-text-field
-          v-model="eventForm.name"
-          class="mt-3"
-          dense
-          :rules="formRules.required"
-          outlined
-          label="Name *"
-          persistent-hint
-          placeholder="Name of the event"
-      />
       <v-datetime-picker :textFieldProps="{rules:formRules.required,outlined:true,dense:true,placeholder:'Event start datetime'}" label="Start" v-model="eventForm.start"> </v-datetime-picker>
       <v-datetime-picker :textFieldProps="{rules:formRules.required,outlined:true,dense:true,placeholder:'Event end datetime'}" label="End" v-model="eventForm.end"> </v-datetime-picker>
       <v-color-picker
