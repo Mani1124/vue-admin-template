@@ -15,6 +15,9 @@ const mutations = {
     TOGGLE_RTL (state,value) {
         state.rtl = value
     },
+    SET_LANGUAGE (state,value) {
+        state.language = value
+    },
     SET_COLOR(state,color) {
         state.color = color
     },

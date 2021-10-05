@@ -12,10 +12,13 @@ import './plugins/vue-moment'
 import './plugins/progressbar'
 import './plugins/chart'
 import './plugins/vuetify-dialog'
+import './plugins/i18n'
+import i18n from "./plugins/i18n";
 Vue.config.productionTip = false
 import VueCodeHighlight from 'vue-code-highlight';
 Vue.use(VueCodeHighlight)
 const app = new Vue({
+  i18n,
   router,
   store,
   vuetify,

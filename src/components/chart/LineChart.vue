@@ -25,7 +25,7 @@
           </div>
           <div style="display: inline-block;" class="pl-2">
             <p class="ma-0 pa-0 text-h6 white--text">{{currency}} {{value}}</p>
-            <p class="ma-0 pa-0 text-caption white--text">{{chartTitle}}</p>
+            <p class="ma-0 pa-0 text-caption white--text">{{$t(chartTitle)}}</p>
           </div>
       </div>
     </div>

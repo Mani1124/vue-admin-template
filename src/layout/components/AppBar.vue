@@ -1,7 +1,9 @@
 <template>
     <v-app-bar app elevation="1">
         <v-app-bar-nav-icon @click="$store.dispatch('setDrawer',!$store.state.drawer)"></v-app-bar-nav-icon>
-        <p style="margin-bottom: 0px" class="text-h6">{{ $route.meta.name}}</p>
+        <p style="margin-bottom: 0px" class="text-h6">
+          {{ $t($route.meta.name) }}
+        </p>
         <v-spacer/>
         <v-menu
             v-model="menu"
@@ -36,6 +38,7 @@
                 </v-list-item>
             </v-list>
         </v-menu>
+
         <v-btn icon @click="toggleTheme" >
             <template v-if="$store.state.dark">
                 <v-icon>mdi-white-balance-sunny</v-icon>
@@ -52,6 +55,18 @@
           <v-icon>mdi-format-textdirection-r-to-l</v-icon>
         </template>
       </v-btn>
+      <div style="width: 120px">
+        <v-select
+            class="mt-5"
+            :items="languages"
+            item-text="name"
+            item-value="id"
+            @change="changeLanguage"
+            dense
+            :value="$store.state.language"
+        ></v-select>
+      </div>
+
       <v-menu
           v-model="accountMenu"
           :close-on-content-click="false"
@@ -115,6 +130,7 @@ import {ThemeColors} from "../../helpers/ThemeColors";
         name:'app-bar',
         data(){
             return{
+                languages:[{id:'en',name:'English'},{id:'sv',name:'Swedish'},{id:'es',name:'Spanish'}],
                 menu:false,
                 fav: true,
                 accountMenu: false,
@@ -162,6 +178,10 @@ import {ThemeColors} from "../../helpers/ThemeColors";
           toggleRTL(){
             this.$store.dispatch('toggleRTL',!this.$store.state.rtl);
             this.$vuetify.rtl = !this.$vuetify.rtl
+          },
+          changeLanguage(value){
+            this.$store.dispatch('setLanguage',value);
+            this.$vuetify.lang.current = value;
           },
             toggleTheme(){
                 this.$store.dispatch('toggleTheme',!this.$store.state.dark);

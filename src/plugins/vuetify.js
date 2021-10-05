@@ -1,6 +1,8 @@
-import Vue from 'vue';
 import Vuetify from 'vuetify/lib/framework';
-Vue.use(Vuetify);
+import i18n from "./i18n";
 export default new Vuetify({
     rtl: false,
+    lang: {
+        t: (key, ...params) => i18n.t(key, params),
+    },
 });
