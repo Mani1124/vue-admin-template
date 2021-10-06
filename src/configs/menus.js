@@ -16,6 +16,14 @@ const menus= [
         params:null,
     },
     {
+        icon: 'mdi-cog',
+        children: [],
+        title: 'Setting',
+        route:'Settings',
+        external:false,
+        params:null,
+    },
+    {
         icon: 'mdi-connection',
         active: false,
         children: [

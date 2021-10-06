@@ -1,15 +1,18 @@
-const revenueRoom={
-    series: [44, 55, 13, 43, 22],
+const revenueOta={
+    series: [23, 21, 7, 34, 22],
     chartOptions: {
+        tooltip:{
+            theme:true,
+        },
         chart: {
             height: 350,
-            type: 'pie',
+            type: 'donut',
         },
-        colors:["#0f7e02","#04277c","#7e023a","#8f8917","#7b0a83"],
+        colors:["#a29f04","#d20423","#06ad7a","#ce2405","#b800c4"],
         chartTitle: {
-            text: 'Revenue V Room Types',
+            text: 'Revenue V OTA',
         },
-        labels: ['Standard Room', 'Deluxe Room', 'Suite Room', 'Connecting Room', 'Apartment Room'],
+        labels: ['MMT', 'Cleartrip', 'Yatra', 'Via', 'Paytm'],
         responsive: [{
             breakpoint: 480,
             options: {
@@ -21,7 +24,6 @@ const revenueRoom={
                 }
             }
         }]
-    },
-
+    }
 }
-export default revenueRoom
+export default revenueOta;

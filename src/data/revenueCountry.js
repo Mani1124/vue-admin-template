@@ -32,6 +32,7 @@ const revenueCountry={
             show: false
         },
         tooltip: {
+            theme:true,
             y: [
                 {
                     title: {

@@ -1,4 +1,4 @@
-export const ThemeColors=()=>{
+const themeColors=()=>{
     return [
         {
             id:1,
@@ -23,3 +23,4 @@ export const ThemeColors=()=>{
         }
     ]
 }
+export default themeColors;

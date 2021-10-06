@@ -79,6 +79,12 @@ const sv={
     Revenue:'Inkomst',
     'New Guests':'Nya gäster',
     Occupancy:'Beläggning',
-    eventcalendar:'Evenemangskalender'
+    eventcalendar:'Evenemangskalender',
+    profilesetting:'Profilinställning',
+    accountsetting:'Kontoinställning',
+    changepassword:'Ändra lösenord',
+    'Profile':'Profil',
+    'Account':'konto',
+    'Change Password':'Ändra lösenord'
 }
 export default sv;

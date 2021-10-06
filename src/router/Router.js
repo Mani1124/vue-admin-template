@@ -81,7 +81,7 @@ export default new Router({
                     meta: { name: 'registration' },
                     components: {
                         admin: () => import('../pages/public/registration/Registration'),
-                    },
+                    }
                 },
                 {
                     path: 'page/calendar/event',
@@ -93,12 +93,41 @@ export default new Router({
                 },
 
                 {
-                    path: '/account/settings',
+                    path: '/settings',
                     name: 'Settings',
                     meta: { name: 'setting' },
                     components: {
                         admin: () => import('../pages/authenticated/setting/Setting'),
                     },
+                    redirect: {
+                        name: 'ProfileSetting'
+                    },
+                    children:[
+                        {
+                            path: '',
+                            name: 'ProfileSetting',
+                            meta: { name: 'profilesetting' },
+                            components: {
+                                setting: () => import('../pages/authenticated/profile/ProfileSetting'),
+                            },
+                        },
+                        {
+                            path: 'account',
+                            name: 'AccountSetting',
+                            meta: { name: 'accountsetting' },
+                            components: {
+                                setting: () => import('../pages/authenticated/account/AccountSetting'),
+                            },
+                        },
+                        {
+                            path: 'change/password',
+                            name: 'ChangePasswordSetting',
+                            meta: { name: 'changepassword' },
+                            components: {
+                                setting: () => import('../pages/authenticated/password/ChangePassword'),
+                            },
+                        },
+                    ]
                 },
                 {
                     path: '/logout',

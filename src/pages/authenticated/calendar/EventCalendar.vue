@@ -42,15 +42,16 @@
             <v-spacer></v-spacer>
             <v-btn-toggle
                 dense
+                :value="type"
                 mandatory
             >
-              <v-btn  @click="type = 'day'">
+              <v-btn value="day" @click="type = 'day'">
                 Day
               </v-btn>
-              <v-btn @click="type = 'week'">
+              <v-btn value="week"   @click="type = 'week'">
                 Week
               </v-btn>
-              <v-btn @click="type = 'month'">
+              <v-btn value="month"  @click="type = 'month'">
                 Month
               </v-btn>
             </v-btn-toggle>
