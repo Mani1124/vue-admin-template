@@ -47,7 +47,7 @@
                 <v-icon>mdi-weather-night</v-icon>
             </template>
         </v-btn>
-      <v-btn icon @click="toggleRTL" >
+        <v-btn icon @click="toggleRTL" >
         <template v-if="$store.state.rtl">
           <v-icon>mdi-format-textdirection-l-to-r</v-icon>
         </template>
@@ -125,39 +125,29 @@
     </v-app-bar>
 </template>
 <script>
-import {ThemeColors} from "../../helpers/ThemeColors";
+import themeColors from "../../configs/themeColors";
+import languagesSupported from "../../configs/languagesSupported";
+import avatarMenu from "../../configs/avatarMenu";
     export default {
         name:'app-bar',
         data(){
             return{
-                languages:[{id:'en',name:'English'},{id:'sv',name:'Swedish'},{id:'es',name:'Spanish'}],
                 menu:false,
                 fav: true,
                 accountMenu: false,
                 message: false,
                 hints: true,
-                accountMenuItems:[
-                  {
-                    title: 'Settings',
-                    route:'Settings',
-                    icon: 'mdi-cog',
-                    external:false,
-                    params:null,
-                  },
-
-                  {
-                    title: 'Logout',
-                    route:'Logout',
-                    icon: 'mdi-logout',
-                    external:false,
-                    params:null,
-                  },
-                ]
             }
         },
         computed:{
           colors(){
-            return ThemeColors()
+            return themeColors;
+          },
+          languages(){
+            return languagesSupported
+          },
+          accountMenuItems(){
+            return avatarMenu;
           }
         },
         methods:{
@@ -165,7 +155,6 @@ import {ThemeColors} from "../../helpers/ThemeColors";
             if(item.external){
               window.open(item.route,'_blank')
             }else{
-
               if(item.params){
                 this.$router.push({name:item.route,params:item.params})
               }else{
@@ -183,17 +172,17 @@ import {ThemeColors} from "../../helpers/ThemeColors";
             this.$store.dispatch('setLanguage',value);
             this.$vuetify.lang.current = value;
           },
-            toggleTheme(){
-                this.$store.dispatch('toggleTheme',!this.$store.state.dark);
-                this.$vuetify.theme.dark = !this.$vuetify.theme.dark
-            },
-            setColor(color){
-                this.$vuetify.theme.themes[this.$store.state.dark ? 'dark' : 'light'].primary=color.primary;
-                this.$vuetify.theme.themes[this.$store.state.dark ? 'dark' : 'light'].secondary=color.secondary;
-                this.$vuetify.theme.themes[this.$store.state.dark ? 'dark' : 'light'].accent=color.accent;
-                this.$vuetify.theme.themes[this.$store.state.dark ? 'dark' : 'light'].info=color.info;
-                this.$store.dispatch('setColor',color);
-            }
+          toggleTheme(){
+              this.$store.dispatch('toggleTheme',!this.$store.state.dark);
+              this.$vuetify.theme.dark = !this.$vuetify.theme.dark
+          },
+          setColor(color){
+              this.$vuetify.theme.themes[this.$store.state.dark ? 'dark' : 'light'].primary=color.primary;
+              this.$vuetify.theme.themes[this.$store.state.dark ? 'dark' : 'light'].secondary=color.secondary;
+              this.$vuetify.theme.themes[this.$store.state.dark ? 'dark' : 'light'].accent=color.accent;
+              this.$vuetify.theme.themes[this.$store.state.dark ? 'dark' : 'light'].info=color.info;
+              this.$store.dispatch('setColor',color);
+          }
         }
     }
 </script>

@@ -13,6 +13,9 @@ let DashboardData= [
             data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
         }],
         chartOptions: {
+            tooltip: {
+                theme:true
+            },
             colors:["#fff"],
             chart: {
                 width: '100%',
@@ -73,7 +76,10 @@ let DashboardData= [
             data: [20, 45, 35, 96, 36, 140, 121, 91, 148]
         }],
         chartOptions: {
-            colors:["#fff"],
+            tooltip: {
+                theme:true
+            },
+                colors:["#fff"],
             chart: {
                 width: '100%',
                 toolbar: {
@@ -133,6 +139,9 @@ let DashboardData= [
             data: [120, 168, 96, 142, 127, 420, 600, 870, 1023]
         }],
         chartOptions: {
+            tooltip: {
+                theme:true
+            },
             colors:["#fff"],
             chart: {
                 width: '100%',
@@ -238,6 +247,7 @@ let DashboardData= [
                 show: false,
             },
             tooltip: {
+                theme:true,
                 y: [
                     {
                         title: {

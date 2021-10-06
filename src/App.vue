@@ -123,6 +123,15 @@
     };
 </script>
 <style>
+.v-tabs--vertical .v-tab{
+  justify-content: flex-start;
+}
+.v-tabs--vertical .v-tab .v-icon{
+  margin-right: 10px;
+}
+*{
+  text-transform: none !important;
+}
 .v-card__title{
   font-size: 14px !important;
   color:gray;

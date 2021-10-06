@@ -79,7 +79,13 @@ const en= {
     Revenue:'Revenue',
     'New Guests':'New Guests',
     Occupancy:'Occupancy',
-    eventcalendar:'Event calendar'
+    eventcalendar:'Event calendar',
+    profilesetting:'Profile Setting',
+    accountsetting:'Account Setting',
+    changepassword:'Change Password',
+    'Profile':'Profile',
+    'Account':'Account',
+    'Change Password':'Change Password'
 
 }
 export default en;

@@ -38,12 +38,12 @@ import PieChart from "../../../components/chart/PieChart";
 import GuestTable from "./components/GuestTable";
 import Breadcrumb from "../../../components/breadcrumb/Breadcrumb";
 import BarChart from "../../../components/chart/BarChart";
-import expectedRevenue from "../../../configs/expectedRevenue";
-import revenueRoom from "../../../configs/revenueRoom";
-import revenueOta from "../../../configs/revenueOta";
-import revenueCountry from "../../../configs/revenueCountry";
-import guest from "../../../configs/guest";
-import DashboardData from "../../../configs/dashboardData";
+import expectedRevenue from "../../../data/expectedRevenue";
+import revenueRoom from "../../../data/revenueRoom";
+import revenueOta from "../../../data/revenueOta";
+import revenueCountry from "../../../data/revenueCountry";
+import guest from "../../../data/guest";
+import DashboardData from "../../../data/dashboardData";
     export default {
         components:{
           'breadcrumb':Breadcrumb,

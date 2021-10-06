@@ -143,7 +143,6 @@ export default {
         confirm_password: [
           v => !!v || 'Confirm password is required',
         ],
-
       },
     }
   },

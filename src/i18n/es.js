@@ -79,6 +79,12 @@ const es={
   Revenue:'Ingresos',
   'New Guests':'Nuevos invitados',
   Occupancy:'Ocupación',
-  eventcalendar:'Calendario de eventos'
+  eventcalendar:'Calendario de eventos',
+  profilesetting:'Ajustes de perfil',
+  accountsetting:'Configuración de cuenta',
+  changepassword:'Cambiar la contraseña',
+  'Profile':'Perfil',
+  'Account':'Cuenta',
+  'Change Password':'Cambiar la contraseña'
 };
 export default es;

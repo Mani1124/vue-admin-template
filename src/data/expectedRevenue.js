@@ -92,6 +92,7 @@ const expectedRevenue={
             ],
         },
         tooltip: {
+            theme:true,
             y: [
                 {
                     title: {

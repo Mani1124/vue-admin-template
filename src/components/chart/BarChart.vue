@@ -1,6 +1,14 @@
 <template>
   <v-card>
-    <div class="ml-3 mt-3 mr-3" style="color: gray"><strong>{{data.chartOptions.chartTitle.text}}</strong></div>
+    <v-card-title>
+      <strong>{{data.chartOptions.chartTitle.text}}</strong>
+      <v-spacer></v-spacer>
+      <v-btn
+          icon
+      >
+        <v-icon>mdi-cached</v-icon>
+      </v-btn>
+    </v-card-title>
     <apexchart :key="remount"   :type="type" :height="data.chartOptions.chart.height" :options="option" :series="data.series"></apexchart>
   </v-card>
 </template>
