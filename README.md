@@ -35,7 +35,7 @@ yarn build
 - <del>RTL support</del>
 - <del>Multiple language support</del>
 - <del>Event calendar</del>
-- Better documentation
+- Documentation
 - Vuetify 3.x.x migration
 
 ## Customize configuration
